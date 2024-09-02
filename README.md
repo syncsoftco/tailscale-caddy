@@ -38,7 +38,7 @@ docker build -t your-dockerhub-username/tailscale-caddy:latest .
 docker run -d \
   -e TAILSCALE_AUTH_KEY=your-tailscale-auth-key \
   -p 8080:8080 \
-  your-dockerhub-username/tailscale-caddy:latest
+  syncsoftco/tailscale-caddy:latest
 ```
 
 ### 5. Accessing Services
