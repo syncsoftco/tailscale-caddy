@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # start-tailscale-and-caddy.sh
 
 # Start the Tailscale daemon in the background
