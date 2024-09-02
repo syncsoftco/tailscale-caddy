@@ -1,4 +1,4 @@
-# tailscale-Caddy
+# tailscale-caddy
 
 A lightweight, secure gateway service that proxies requests to resources within a Tailscale network. This project integrates Tailscale with the Caddy web server, allowing you to forward HTTP requests to services only accessible within your Tailscale network.
 
