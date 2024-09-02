@@ -14,4 +14,4 @@ COPY start-tailscale-and-caddy.sh /app/start-tailscale-and-caddy.sh
 RUN chmod +x /app/start-tailscale-and-caddy.sh
 
 # Set the script as the entry point
-ENTRYPOINT ["/app/start-tailscale-and-caddy.sh"]
+ENTRYPOINT ["/bin/sh", "/app/start-tailscale-and-caddy.sh"]
