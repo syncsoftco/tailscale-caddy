@@ -4,8 +4,14 @@ FROM tailscale/tailscale:latest
 # Install Caddy
 RUN apk update && apk add --no-cache caddy
 
-# Copy start script
-COPY start-tailscale-and-caddy.sh /usr/local/bin/start-tailscale-and-caddy.sh
-RUN chmod +x /usr/local/bin/start-tailscale-and-caddy.sh
+# Create a working directory
+WORKDIR /app
 
-ENTRYPOINT ["/usr/local/bin/start-tailscale-and-caddy.sh"]
+# Copy start script
+COPY start-tailscale-and-caddy.sh /app/start-tailscale-and-caddy.sh
+
+# Ensure the script is executable
+RUN chmod +x /app/start-tailscale-and-caddy.sh
+
+# Set the script as the entry point
+ENTRYPOINT ["/app/start-tailscale-and-caddy.sh"]
