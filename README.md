@@ -37,6 +37,8 @@ docker build -t your-dockerhub-username/tailscale-caddy:latest .
 ```bash
 docker run -d \
   -e TAILSCALE_AUTH_KEY=your-tailscale-auth-key \
+  -e TARGET_SERVICE=your-tailscale-service-name-or-ip \
+  -e TARGET_PORT=your-target-service-port \
   -p 8080:8080 \
   syncsoftco/tailscale-caddy:latest
 ```
